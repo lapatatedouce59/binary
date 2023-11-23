@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Game</title>
+
+    <style>
+        body{
+            margin: 0;
+            background-color: #1F1F1F;
+            /*display: flex;*/
+        }
+        header{
+            background-color: #383838;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 35px;
+        }
+        #options{
+            margin: auto;
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .paramInputs{
+            background-color: #1C1C1C;
+            color: #1AB700;
+            border: black solid 2px;
+            text-align: center;
+        }
+
+        .inputLegend{
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .gameZone{
+            background-color: #383838;
+            margin: auto;
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .gamebtn{
+            background-color: #1C1C1C;
+            color: white;
+            border: black solid 2px;
+            text-align: center;
+            width: 400px;
+            height: 200px;
+            transition: all 100ms;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        .gamebtn:hover{
+            background-color: #1C1C1C;
+            color: #1AB700;
+            border: #1AB700 solid 6px;
+            text-align: center;
+            width: 400px;
+            height: 200px;
+            font-size: 30px;
+            transition: all 100ms;
+        }
+
+        .bigTextSpan{
+            color: #1AB700;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            font-size: 20px;
+            font-size: 40px;
+        }
+
+        #gamehead{
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-evenly !important;
+        }
+
+        .spanCont1{
+            /*padding-inline: 50px;*/
+        }
+
+        #btnContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            flex-direction: row-reverse;
+        }
+        .chkCont{
+            display: inline-flex;
+            flex-direction: column;
+            align-items:center ;
+            text-align: center;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+        .resChk{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <b><i style="font-family: 'Courier New', Courier, monospace; margin: 0; color: #1AB700;" class="typewrite" data-period="2000" data-type='[ "BINARY GAME", "PLAY WITH BINARY!", "PRO TIP: DO MATHS", "BE THE FASTEST", "01011010 01001001 01011010 01001001" ]'>BINARY GAME</i></b>
+    </header>
+    <div id="options">
+        <span class="inputLegend">Nombre de tours: (10 max): <input type="number" placeholder="Tours..." min="1" max="10" class="paramInputs" id="roundsNum" value="5"></span>
+        <span class="inputLegend">Nombre de bits (14 max): <input type="number" placeholder="Bits..." min="2" max="14" class="paramInputs" id="bitsNum" value="8"></span>
+        <span class="inputLegend">Nombre maximal: <input type="number" readonly value="10334" class="paramInputs" style="margin-top: 15px;"></span>
+    </div>
+        <div class="gameZone">
+            <button id="startGame" class="gamebtn" style="">COMMENCER</button>
+        </div>
+        <div class="gameZone" style="display: none;">
+            <div id="gamehead">
+                <div class="spanCont1">
+                    <span class="bigTextSpan" style="color: white;">Cible: <span class="bigTextSpan" id="targetNum">2034</span></span>
+                </div>
+                <div class="spanCont1">
+                    <span class="bigTextSpan" style="color: white;">Actuel: <span class="bigTextSpan" id="targetNum">2031</span></span>
+                </div>
+            </div>
+    
+            <div id="btnContainer">
+                <div class="chkCont">
+                    <span class="chkValue">1</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">2</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">4</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">8</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">16</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">32</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">64</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+                <div class="chkCont">
+                    <span class="chkValue">128</span>
+                    <input type="checkbox" id="chk32" class="resChk">
+                </div>
+            </div>
+            <span class="bigTextSpan" style="color: white;">Code binaire: <span class="bigTextSpan" id="targetNum">01101001</span></span>
+        </div>
+    </div>
+    <script src="./misc.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
