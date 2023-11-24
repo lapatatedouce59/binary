@@ -124,12 +124,12 @@
     <div id="options">
         <span class="inputLegend">Nombre de tours: (10 max): <input type="number" placeholder="Tours..." min="1" max="10" class="paramInputs" id="roundsNum" value="5"></span>
         <span class="inputLegend">Nombre de bits (14 max): <input type="number" placeholder="Bits..." min="2" max="14" class="paramInputs" id="bitsNum" value="8"></span>
-        <span class="inputLegend">Nombre maximal: <input type="number" readonly value="10334" class="paramInputs" style="margin-top: 15px;"></span>
+        <span class="inputLegend">Nombre maximal: <input type="number" readonly value="10334" class="paramInputs" style="margin-top: 15px;" id="maxNum"></span>
     </div>
-        <div class="gameZone">
-            <button id="startGame" class="gamebtn" style="">COMMENCER</button>
+        <div class="gameZone" id="zoneBtn">
+            <button id="startGame" class="gamebtn">COMMENCER</button>
         </div>
-        <div class="gameZone" style="display: none;">
+        <div class="gameZone" style="display: none;" id="zoneGame">
             <div id="gamehead">
                 <div class="spanCont1">
                     <span class="bigTextSpan" style="color: white;">Cible: <span class="bigTextSpan" id="targetNum">2034</span></span>
