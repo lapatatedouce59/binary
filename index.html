@@ -46,7 +46,7 @@
             background-color: #383838;
             margin: auto;
             width: 100%;
-            height: 300px;
+            height: 500px;
             margin-top: 20px;
             display: inline-flex;
             align-items: center;
@@ -130,6 +130,34 @@
             font-family: 'Courier New', Courier, monospace;
             border: white solid 3px;
         }
+
+        .bottomTxt{
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #continueBtn{
+            background-color: #1C1C1C;
+            color: white;
+            border: black solid 2px;
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            transition: all 100ms;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        #continueBtn:hover{
+            background-color: #1C1C1C;
+            color: #1AB700;
+            border: #1AB700 solid 6px;
+            text-align: center;
+            width: 350px;
+            height: 50px;
+            font-size: 30px;
+            transition: all 100ms;
+        }
     </style>
 </head>
 <body>
@@ -145,11 +173,27 @@
             <table id="resultTable">
                 <tr>
                     <th scope="col">Round</th>
-                    <th scope="col">Valeur max</th>
+                    <th scope="col">Valeur cible</th>
                     <th scope="col">Temps</th>
+                    <th scope="col">Clics</th>
                 </tr>
-                <tr><td></td><td></td><td></td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+                <tr><td>1</td><td>255</td><td>12sec</td><td>4</td></tr>
+
+                
             </table>
+            <div style="display: flex; width: 100%; justify-content: space-evenly;">
+                <span class="bottomTxt">Temps moyen: <b><span id="averageTime" class="bottomTxt" style="color: #1AB700;">6,6sec</span></b></span>
+                <span class="bottomTxt">Clics moyen: <b><span id="averageClic" class="bottomTxt" style="color: #1AB700;">3</span></b></span>
+            </div>
+            <button id="continueBtn">Continuer</button>
         </div>
         <div class="gameZone" id="zoneBtn" style="display: none;">
             <button id="startGame" class="gamebtn">COMMENCER</button>
