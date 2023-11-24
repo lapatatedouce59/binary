@@ -115,6 +115,21 @@
             width: 40px;
             height: 40px;
         }
+        #resultTable{
+            width: 50%;
+        }
+
+        th{
+            color: #115f04;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            border: white solid 3px;
+        }
+        td{
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            border: white solid 3px;
+        }
     </style>
 </head>
 <body>
@@ -126,7 +141,17 @@
         <span class="inputLegend">Nombre de bits (14 max): <input type="number" placeholder="Bits..." min="2" max="14" class="paramInputs" id="bitsNum" value="8"></span>
         <span class="inputLegend">Nombre maximal: <input type="number" readonly value="10334" class="paramInputs" style="margin-top: 15px;" id="maxNum"></span>
     </div>
-        <div class="gameZone" id="zoneBtn">
+        <div class="gameZone" id="zoneResults">
+            <table id="resultTable">
+                <tr>
+                    <th scope="col">Round</th>
+                    <th scope="col">Valeur max</th>
+                    <th scope="col">Temps</th>
+                </tr>
+                <tr><td></td><td></td><td></td></tr>
+            </table>
+        </div>
+        <div class="gameZone" id="zoneBtn" style="display: none;">
             <button id="startGame" class="gamebtn">COMMENCER</button>
         </div>
         <div class="gameZone" style="display: none;" id="zoneGame">
@@ -135,7 +160,7 @@
                     <span class="bigTextSpan" style="color: white;">Cible: <span class="bigTextSpan" id="targetNum">2034</span></span>
                 </div>
                 <div class="spanCont1">
-                    <span class="bigTextSpan" style="color: white;">Actuel: <span class="bigTextSpan" id="targetNum">2031</span></span>
+                    <span class="bigTextSpan" style="color: white;">Actuel: <span class="bigTextSpan" id="actualNum">2031</span></span>
                 </div>
             </div>
     
@@ -173,7 +198,7 @@
                     <input type="checkbox" id="chk32" class="resChk">
                 </div>
             </div>
-            <span class="bigTextSpan" style="color: white;">Code binaire: <span class="bigTextSpan" id="targetNum">01101001</span></span>
+            <span class="bigTextSpan" style="color: white;">Code binaire: <span class="bigTextSpan" id="numToBin">01101001</span></span>
         </div>
     </div>
     <script src="./misc.js"></script>
